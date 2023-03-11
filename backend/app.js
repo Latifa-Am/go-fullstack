@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+//Handle incoming POST Requests
+app.use(express.json());
+
 //Handle Cors error
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin','*');
@@ -8,8 +11,15 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Methods','GET, PUT, POST, DELETE, PATCH, OPTIONS');
     next();
 });
+//POST Request (add stuff)
+app.post('/api/stuff', (req, res, next) => {
+    console.log(req.body);
+    res.status(201).json({
+        message : 'Stuff added successfully!'
+    });
+});
 //Get Request (Get stuffs)
-app.use('/api/stuff', (req, res, next) => {
+app.get('/api/stuff', (req, res, next) => {
     const stuff = [
         {
             _id : 'id_stuff_01',
