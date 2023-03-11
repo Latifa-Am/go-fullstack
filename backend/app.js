@@ -1,6 +1,19 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
 
+//Connect to mongoDB Atlas 
+/**
+ * ToDo: edit the url inside the connect() function
+ */
+mongoose.connect('mongodb://username:password@host:port/database?options...')
+.then(() => {
+    console.log('Successfully Connected to Mongodb Atlas');
+})
+.catch((error) => {
+    console.log('Unable to Connect to Mongodb');
+    console.error(error);
+});
 //Handle incoming POST Requests
 app.use(express.json());
 
