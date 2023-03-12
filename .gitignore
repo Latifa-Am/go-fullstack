@@ -1,5 +1,2 @@
-go-fullstack-01/backend/node_modules
-go-fullstack-01/frontend/node_modules
-go-fullstack-01/frontend/.idea
-go-fullstack-02/fullstack-activity/node_modules
-go-fullstack-02/fullstack-activity-backend/node_modules
+activity-frontend/node_modules
+activity-backend/node_modules
