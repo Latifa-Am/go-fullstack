@@ -71,5 +71,40 @@ app.get('/api/stuff/:id', (req, res, next) => {
          });
      }); 
  });
-
+// Update an existing thing object
+app.put('/api/stuff/:id', (req, res, next) => {
+    const thing = new Thing({
+        _id : req.params.id,
+        title : req.body.title,
+        description : req.body.description,
+        imageUrl : req.body.imageUrl,
+        price : req.body.price,
+        userId : req.body.userId
+    });
+    Thing.updateOne({_id: req.params.id}, thing)
+    .then(() => {
+        res.status(201).json({
+            message : 'Stuff updated successfully!'
+        }); 
+    })
+    .catch((error) => {
+        res.status(400).json({
+            error : error
+        });
+    }); 
+});
+// Delete an existing thing object
+app.delete('/api/stuff/:id', (req, res, next) => {
+    Thing.deleteOne({_id : req.params.id})
+    .then(() => {
+        res.status(201).json({
+            message : 'Stuff deleted successfully!'
+        }); 
+    })
+    .catch((error) => {
+        res.status(400).json({
+            error : error
+        });
+    }); 
+});
 module.exports = app;
