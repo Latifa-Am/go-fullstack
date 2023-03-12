@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "implementation of the required routes using nodejs ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Latifa-Am/go-fullstack.git"
+  },
+  "keywords": [
+    "nodejs",
+    "api",
+    "express",
+    "mongodb"
+  ],
+  "author": "Latifa-Am",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Latifa-Am/go-fullstack/issues"
+  },
+  "homepage": "https://github.com/Latifa-Am/go-fullstack#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.0.1"
+  }
+}
