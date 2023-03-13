@@ -1,8 +1,8 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "The backend side of the go-fullstack project ",
-  "main": "server.js ",
+  "description": "implementation of the required routes using nodejs ",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,12 +11,12 @@
     "url": "git+ssh://git@github.com/Latifa-Am/go-fullstack.git"
   },
   "keywords": [
-    "backend",
     "nodejs",
+    "api",
     "express",
     "mongodb"
   ],
-  "author": "Latifa-Am (course from Openclassrooms)",
+  "author": "Latifa-Am",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Latifa-Am/go-fullstack/issues"
