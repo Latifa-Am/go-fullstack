@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 const stuffRouter = require('./routes/thing');
+const userRouter = require('./routes/user');
 
 //Connect to mongoDB Atlas 
 /**
@@ -29,5 +30,6 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 app.use('/api/stuff', stuffRouter);
+app.use('/api/auth', userRouter);
 
 module.exports = app;
